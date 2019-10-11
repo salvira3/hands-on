@@ -9,7 +9,7 @@ export class Header extends React.Component {
     this.props = {
       title: '',
       subtitle: '',
-      img_url: '',
+      img_url: '', // future improvement, conditional bg ?? button availability ??
     }
   }
   render() {
@@ -24,13 +24,13 @@ export class Header extends React.Component {
               <div className="row">
                 <div className="col-12 col-md-7">
                   <h1 className="font-weight-bold">
-                    Get your real work experience here!
+                    {this.props.title}
                   </h1>
                 </div>
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 pt-3">
-                  <h4 className="subtitle-content">Get a chance to try your dream job position. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+                  <h4 className="subtitle-content">{this.props.subtitle}</h4>
                 </div>
               </div>
               <div className="row">
