@@ -1,0 +1,37 @@
+body {
+  /* sementara ya buat ngetes fontnya source sans pro dulu */
+  font-family: 'Source Sans Pro'
+}
+.bg-home {
+  background-image: url('asset/Home-bg.jpg');
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  color: white;
+}
+.bold-title {
+  font-weight: 700;
+}
+.subtitle-content {
+  font-weight: 200;
+}
+.first-header-padding {
+  padding-top: 120px;
+}
+.bg-home h1 {
+  font-size: 50pt;
+}
+.logo img {
+  height: 35px
+}
+.logo {
+  padding: 15px 20px
+}
+.btn-home {
+  background-color: #2F8FFD;
+  border-radius: 2px;
+  color: white;
+}
+.bg-home button {
+  font-weight: 700;
+}
