@@ -1,6 +1,66 @@
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-RegularItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-ExtraBold.otf') format('opentype');
+  font-weight: bolder;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-ExtraBoldItalic.otf') format('opentype');
+  font-weight: bolder;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-Light.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('font/Gilroy-LightItalic.otf') format('opentype');
+  font-weight: lighter;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('font/Avenir-Medium-09.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('font/Avenir-Light-07.ttf') format('truetype');
+  font-weight: lighter;
+  font-style: normal;
+}
 body {
   /* sementara ya buat ngetes fontnya source sans pro dulu */
-  font-family: 'Source Sans Pro'
+  font-family: 'Gilroy'
 }
 .bg-home {
   background-image: url('asset/Home-bg.jpg');
@@ -10,10 +70,11 @@ body {
   color: white;
 }
 .bold-title {
-  font-weight: 700;
+  font-weight: bolder;
 }
 .subtitle-content {
-  font-weight: 200;
+  font-family: 'Avenir';
+  font-weight: lighter;
 }
 .first-header-padding {
   padding-top: 120px;
