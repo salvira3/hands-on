@@ -34,7 +34,7 @@ export class Header extends React.Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-12 col-md-6 pt-3">
+                <div className="col-12 col-md-6 pt-3 pb-3">
                   <button class="btn btn-home btn-block mt-2">Discover More</button>
                 </div>
               </div>
