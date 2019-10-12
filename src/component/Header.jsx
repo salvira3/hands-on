@@ -5,11 +5,22 @@ import '../mystyle.css';
 export class Header extends React.Component {
   constructor(props) {
     super(props);
+
+    this.scrollFocus = React.createRef()
+
     this.state = {}
     this.props = {
       title: '',
       subtitle: '',
       img_url: '', // future improvement, conditional bg ?? button availability ??
+    }
+  }
+  buttonOnClick = (event) => {
+    if (this.scrollFocus.current) {
+      this.scrollFocus.current.scrollIntoView({
+        behavior: "smooth", 
+        block: "nearest"
+      })
     }
   }
   render() {

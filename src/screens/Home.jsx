@@ -28,15 +28,21 @@ export class Home extends React.Component {
                 <h1 className="bold-title">Available Hands-On Courses</h1>
               </div>
             </div>
-            <div className="row justify-content-md-center">
-              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="hehe"/>
+            <div className="row justify-content-md-center" id="course">
+              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail"/>
               <CourseCard title="Product Design" subtitle="Coming Soon" img_url="card2"/>
               <CourseCard title="UX Design" subtitle="Coming Soon" img_url="card1"/>
             </div>
           </div>
         </div>
-        <div style={{backgroundColor: white}}>
-          
+        <div style={{backgroundColor: 'white'}}>
+          <div className="container pt-5">
+            <div className="row">
+              <div className="col-12">
+                <h1 className="bold-title">Why Hands-On?</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )
