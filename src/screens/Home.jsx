@@ -3,6 +3,7 @@ import { Header } from '../component/Header';
 import { CourseCard } from '../component/CourseCard';
 import { DescIcon } from '../component/DescIcon';
 import { TestimoniCard } from '../component/TestimoniCard';
+import { RegisterCard } from '../component/RegisterCard';
 
 export class Home extends React.Component {
   constructor(props) {
@@ -83,14 +84,26 @@ export class Home extends React.Component {
               </div>
             </div>
             <div className="row pt-5">
-              <div className="col-sm-4">
+              <div className="col-md-4">
                 <TestimoniCard name="Fathya Annasya" role="Software Quality Assurance Intern Mapan - PT Ruma" img_url="nasy" review="Saya percaya pada pembelajaran seumur hidup, dan Hands-On adalah tempat yang hebat untuk belajar dari expert. Saya belajar banyak dan merekomendasikannya ke semua teman saya."/>
               </div>
-              <div className="col-sm-4 pt-5 pt-sm-0">
+              <div className="col-md-4 pt-5 pt-md-0">
                 <TestimoniCard name="M. Fawwaz Syarif" role="Product Management Intern Traveloka" img_url="fawwaz" review="Saya bekerja di manajemen proyek dan bergabung dengan Hands-On karena saya mendapatkan kursus hebat. Mentor-mentornya luar biasa, menarik, dan sangat membantu. Terima kasih Hands-On!"/>
               </div>
-              <div className="col-sm-4 pt-5 pt-sm-0">
+              <div className="col-md-4 pt-5 pt-md-0">
                 <TestimoniCard name="Ivan Abdurrahman" role="Product Designer Intern Kargo Tech" img_url="ivan" review="Bagian terbaik dari Hands-On adalah pilihannya. Kamu dapat menemukan job position untuk semua hal yang ingin Kamu pelajari! Coba aku tahu dari dulu, pasti sudah daftar dari awal."/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{backgroundColor: 'white'}}>
+          <div className="container pt-5 pb-5">
+            <div className="row">
+              <div className="col-md-6 first-card">
+                <RegisterCard title="Be one of our mentors" subtitle="Positively impact a student's life." btn_text="Create mentor account"/>
+              </div>
+              <div className="col-md-6">
+                <RegisterCard title="Hire our best participants" subtitle="Get best candidates for your company." btn_text="Create company account"/>
               </div>
             </div>
           </div>
