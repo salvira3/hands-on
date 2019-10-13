@@ -4,6 +4,7 @@ import { CourseCard } from '../component/CourseCard';
 import { DescIcon } from '../component/DescIcon';
 import { TestimoniCard } from '../component/TestimoniCard';
 import { RegisterCard } from '../component/RegisterCard';
+import { Footer } from '../container/Footer';
 
 export class Home extends React.Component {
   constructor(props) {
@@ -108,6 +109,7 @@ export class Home extends React.Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }

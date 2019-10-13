@@ -53,7 +53,7 @@ export class Header extends React.Component {
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 pt-3 pb-3">
-                  <button class="btn btn-home pr-5 pl-5 mt-2" onClick={this.buttonOnClick}>Get early access</button>
+                  <a href="https://hands-on.typeform.com/to/mA1QIC" target="_blank" rel="noopener noreferrer"><button class="btn btn-home pr-5 pl-5 mt-2">Get early access</button></a>
                 </div>
               </div>
             </div>
