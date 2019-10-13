@@ -1,6 +1,7 @@
 // props: title, subtitle, image?? logo here
 import React from 'react';
 import '../mystyle.css';
+import { Link } from 'react-router-dom';
 
 export class CourseCard extends React.Component {
   constructor(props) {
@@ -11,7 +12,8 @@ export class CourseCard extends React.Component {
       subtitle: '',
       img_url: '',
       button: '',
-      path: ''
+      path: '',
+      
     }
   }
   render() {
@@ -27,7 +29,7 @@ export class CourseCard extends React.Component {
             <a href={this.props.button} target="_blank" rel="noopener noreferrer"><button class="btn btn-home btn-block mt-4 bold-title">Register Now</button></a>
           </div>
           <div className="link text-center p-2 bold-title">
-            <a href="http://google.com">I want to know more</a>
+            <Link to="/detail">I want to know more</Link>
           </div>
           
         </div>
