@@ -58,6 +58,24 @@
   font-weight: lighter;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('font/ProximaNova-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('font/ProximaNova-Thin.otf') format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('font/ProximaNova-Semibold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
 body {
   font-family: 'Gilroy'
 }
@@ -157,5 +175,19 @@ body {
   height: 100%; 
 }
 .desc-icon img {
-  width: 130px;
+  width: 120px;
+}
+.subtitle-role {
+  font-family: 'Proxima Nova';
+  color: #222;
+}
+.testimoni-card {
+  background: white;
+  border: 1px solid #aaa;
+}
+.testimoni-card img {
+  width: 100%;
+}
+.person-info p {
+  margin-bottom: 5px;
 }
