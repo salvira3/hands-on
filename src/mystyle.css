@@ -74,6 +74,7 @@ body {
 .subtitle-content {
   font-family: 'Avenir';
   font-weight: lighter;
+  line-height: 1.6;
 }
 .first-header-padding {
   padding-top: 120px;
@@ -85,12 +86,19 @@ body {
   height: 35px
 }
 .logo {
-  padding: 15px 20px
+  padding: 20px 40px
 }
 .btn-home {
   background-color: #2F8FFD;
-  border-radius: 2px;
+  border-radius: 0;
   color: white;
+  transition: 0.3s;
+}
+.btn-home:hover {
+  background: #62aafd;
+}
+.my-button a:hover {
+  text-decoration: none;
 }
 .bg-home button {
   font-weight: 700;
@@ -127,7 +135,24 @@ body {
 .thumbnail-container .content {
   color: white;
   position: absolute;
-  bottom: 15px;
+  bottom: 5px;
   left: 30px;
   z-index: 2;
+}
+.about-section {
+  color: #333;
+}
+.embed-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; 
+  overflow: hidden; 
+  max-width: 100%; 
+} 
+.embed-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
 }

@@ -29,7 +29,7 @@ export class Header extends React.Component {
       })
     }
   }
-  
+  // to do: separate logo to 1 component with navbar
   render() {
     return (
       <div className="container-fluid">
@@ -53,7 +53,7 @@ export class Header extends React.Component {
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 pt-3 pb-3">
-                  <button class="btn btn-home btn-block mt-2" onClick={this.buttonOnClick}>Discover More</button>
+                  <button class="btn btn-home pr-5 pl-5 mt-2" onClick={this.buttonOnClick}>Get early access</button>
                 </div>
               </div>
             </div>
