@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from '../component/Header';
-import { CourseCard } from '../component/CourseCard'
+import { CourseCard } from '../component/CourseCard';
+import { DescIcon } from '../component/DescIcon';
 
 export class Home extends React.Component {
   constructor(props) {
@@ -54,6 +55,21 @@ export class Home extends React.Component {
                 <div className="embed-container">
                   <iframe src="https://www.youtube.com/embed/OGZwpPWwAWU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{backgroundColor: 'white'}}>
+          <div className="container pt-5 pb-5">
+            <div className="row">
+              <div className="col-sm-4">
+                <DescIcon img_url="icon-2" title="Real Hands-On Project" subtitle="With real Hands-on projects and immersive content built in partnership with top tier companies, you’ll master the tech skills companies want."/>
+              </div>
+              <div className="col-sm-4">
+                <DescIcon img_url="icon-3" title="Mentored by Experts" subtitle="Get a knowledgeable mentor who guides your learning and is focused on answering your questions, motivating you and keeping you on track."/>
+              </div>
+              <div className="col-sm-4">
+                <DescIcon img_url="icon-1" title="Hired in Top Companies" subtitle="You’ll have access to career coaching sessions, interview prep advice, and resume and online professional profile reviews to help you grow in your career."/>
               </div>
             </div>
           </div>
