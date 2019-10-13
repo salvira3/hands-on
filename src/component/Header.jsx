@@ -7,15 +7,21 @@ export class Header extends React.Component {
     super(props);
 
     this.scrollFocus = React.createRef()
-
+    
     this.state = {}
     this.props = {
       title: '',
       subtitle: '',
       img_url: '', // future improvement, conditional bg ?? button availability ??
     }
+    this.buttonOnClick = this.buttonOnClick.bind(this)
+    
+  }
+  componentDidMount() {
+    this.props.refToScroll(this.scrollFocus)
   }
   buttonOnClick = (event) => {
+    
     if (this.scrollFocus.current) {
       this.scrollFocus.current.scrollIntoView({
         behavior: "smooth", 
@@ -23,6 +29,7 @@ export class Header extends React.Component {
       })
     }
   }
+  
   render() {
     return (
       <div className="container-fluid">
@@ -46,7 +53,7 @@ export class Header extends React.Component {
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 pt-3 pb-3">
-                  <button class="btn btn-home btn-block mt-2">Discover More</button>
+                  <button class="btn btn-home btn-block mt-2" onClick={this.buttonOnClick}>Discover More</button>
                 </div>
               </div>
             </div>

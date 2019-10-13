@@ -14,14 +14,22 @@ export class Home extends React.Component {
       day = "Coming Soon"
     }
     this.state = {
-      countdown: `Next batch opens on: ${day} day(s)`
+      countdown: `Next batch opens on: ${day} day(s)`,
+      listDataFromChild: null,
     }
+    
+  }
+  dataFromHeader = (myData) => {
+    this.setState({
+      listDataFromChild: myData
+    })
   }
   render() {
+    // get ref from sibling???
     return (
       <div>
-        <Header title="Get your real work experience here!" subtitle="Get a chance to try your dream job position. Lorem ipsum dolor sit amet, consectetur adipisicing elit."/>
-        <div style={{backgroundColor: "#F4F4F4"}}>
+        <Header title="Get your real work experience here!" subtitle="Get a chance to try your dream job position. Lorem ipsum dolor sit amet, consectetur adipisicing elit." refToScroll={this.dataFromHeader}/>
+        <div style={{backgroundColor: "#F4F4F4"}} ref={this.state.listDataFromChild}>
           <div className="container pt-5">
             <div className="row">
               <div className="col-12">
