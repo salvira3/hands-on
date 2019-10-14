@@ -18,6 +18,12 @@
 }
 @font-face {
   font-family: 'Gilroy';
+  src: url('font/Gilroy-Medium.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
   src: url('font/Gilroy-ExtraBold.otf') format('opentype');
   font-weight: bolder;
   font-style: normal;
@@ -224,6 +230,14 @@ body {
   font-weight: 500;
   color: #444;
 }
+.nav-link {
+  color: white;
+  font-weight: 300;
+}
+.nav-link:hover {
+  color: white;
+  text-decoration: underline;
+}
 @media (max-width: 768px) { /* media queries for -md */
   .first-card {
     border-right: none;
@@ -243,5 +257,8 @@ body {
   .desc-icon {
     text-align: center;
     
+  }
+  .logo {
+    padding: 0;
   }
 }

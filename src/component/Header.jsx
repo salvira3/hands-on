@@ -1,6 +1,7 @@
 // props: title, subtitle, image?? logo here
 import React from 'react';
 import '../mystyle.css';
+import { Navbar } from '../container/Navbar';
 
 export class Header extends React.Component {
   constructor(props) {
@@ -35,9 +36,7 @@ export class Header extends React.Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-12 bg-home">
-            <div className="logo">
-              <img src={require('../asset/logo.png')} alt="logo"/>
-            </div>
+            <Navbar/>
             <div className="container first-header-padding">
               <div className="row">
                 <div className="col-12 col-md-7">
