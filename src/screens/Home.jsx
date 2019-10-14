@@ -9,24 +9,36 @@ import { Footer } from '../container/Footer';
 export class Home extends React.Component {
   constructor(props) {
     super(props);
-    
-    const testDate = new Date("October 20, 2019 23:55:00").getTime();
-    const now = new Date().getTime();
-    const distance = testDate - now;
-    let day = Math.floor(distance / (1000 * 60 * 60 * 24));
-    if (distance <= 0) {
-      day = "Coming Soon"
-    }
     this.state = {
-      countdown: `Next batch opens on: ${day} day(s)`,
+      countdown: '',
       listDataFromChild: null,
+      status: 'inactive',
     }
-    
+  }
+  componentDidMount = () => {
+    this.setDate();
   }
   dataFromHeader = (myData) => {
     this.setState({
       listDataFromChild: myData
     })
+  }
+  setDate = () => {
+    const testDate = new Date("October 20, 2019 23:55:00").getTime();
+    const now = new Date().getTime();
+    const distance = testDate - now;
+    let day = Math.floor(distance / (1000 * 60 * 60 * 24));
+    // TO-DO: if include coming soon, status to inactive ???
+    this.setState({
+      countdown: `Next batch opens on: ${day} day(s)`,
+      status: 'active'
+    })
+    if (distance <= 0) {
+      this.setState({
+        countdown: `Coming Soon`,
+        status: 'inactive',
+      })
+    }
   }
   render() {
     // get ref from sibling???
@@ -41,9 +53,9 @@ export class Home extends React.Component {
               </div>
             </div>
             <div className="row justify-content-md-center" id="course">
-              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail"/>
-              <CourseCard title="Product Design" subtitle="Coming Soon" img_url="card2"/>
-              <CourseCard title="UX Research" subtitle="Coming Soon" img_url="card3"/>
+              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail" status={this.state.status}/>
+              <CourseCard title="Product Design" subtitle="Coming Soon" img_url="card2" button="http://google.com" path="detail"  status="inactive"/>
+              <CourseCard title="UX Research" subtitle="Coming Soon" img_url="card3" button="http://google.com" path="detail"  status="inactive"/>
             </div>
           </div>
         </div>

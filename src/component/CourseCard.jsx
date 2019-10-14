@@ -13,11 +13,12 @@ export class CourseCard extends React.Component {
       img_url: '',
       button: '',
       path: '',
+      status: '',
       
     }
   }
   render() {
-    if (this.props.button !== undefined) {
+    if (this.props.status === 'active') {
       return(
         <div className="col-md-4 col-sm-12 pt-5">
           <div className="thumbnail-container">
