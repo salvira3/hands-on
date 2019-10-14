@@ -17,6 +17,7 @@ export class Home extends React.Component {
   }
   componentDidMount = () => {
     this.setDate();
+    document.title = "Learn at Hands-On"
   }
   dataFromHeader = (myData) => {
     this.setState({
