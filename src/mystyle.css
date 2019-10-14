@@ -151,6 +151,7 @@ body {
   position: relative;
   
 }
+
 .thumbnail-container img{
   object-fit: cover;
   width: 100%;
@@ -180,6 +181,18 @@ body {
   bottom: 5px;
   left: 30px;
   z-index: 2;
+}
+.disable-thumbnail .thumbnail-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background: rgba(107, 107, 107, 0.9);
+
 }
 .about-section {
   color: #333;

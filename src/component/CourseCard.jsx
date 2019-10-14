@@ -32,7 +32,7 @@ export class CourseCard extends React.Component {
     }
     else {
       return(
-        <div className="col-md-4 col-sm-12 pt-5">
+        <div className="col-md-4 col-sm-12 pt-5 disable-thumbnail">
           <div className="thumbnail-container">
             <img src={require(`../asset/${this.props.img_url}.png`)} alt="course"/>
             <h4 class="bold-title title">{this.props.title}</h4>
