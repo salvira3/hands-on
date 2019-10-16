@@ -5,6 +5,7 @@ import { DescIcon } from '../component/DescIcon';
 import { TestimoniCard } from '../component/TestimoniCard';
 import { RegisterCard } from '../component/RegisterCard';
 import { Footer } from '../container/Footer';
+import { BrowserRouter as Router, NavLink, Route, Switch, Link } from "react-router-dom";
 
 export class Home extends React.Component {
   constructor(props) {
@@ -41,6 +42,9 @@ export class Home extends React.Component {
       })
     }
   }
+  routeToDetail() {
+    this.props.history.push('/detail')
+  }
   render() {
     // get ref from sibling???
     return (
@@ -54,7 +58,7 @@ export class Home extends React.Component {
               </div>
             </div>
             <div className="row justify-content-md-center" id="course">
-              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail" status={this.state.status}/>
+              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail" status={this.state.status} onClick={this.routeToDetail}/>
               <CourseCard title="Product Design" subtitle="Coming Soon" img_url="card2" button="http://google.com" path="detail"  status="inactive"/>
               <CourseCard title="UX Research" subtitle="Coming Soon" img_url="card3" button="http://google.com" path="detail"  status="inactive"/>
             </div>
