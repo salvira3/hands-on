@@ -4,20 +4,41 @@ import { DescIcon } from '../component/DescIcon';
 import { Footer } from '../container/Footer';
 import { MentorCard } from '../component/MentorCard';
 import { NumberDesc } from '../component/NumberDesc';
+import { CountdownNumber } from '../component/CountdownNumber';
 
 export class CourseDetail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       listDataFromChild: null,
+      days: '',
+      hours: '',
+      minutes: '',
+      seconds: '',
     }
   }
   componentDidMount = () => {
-    document.title = "Product Management Course at Hands-On"
+    document.title = "Product Management Course at Hands-On";
+    this.setDate();
   }
   dataFromHeader = (myData) => {
     this.setState({
       listDataFromChild: myData
+    })
+  }
+  setDate = () => {
+    const testDate = new Date("October 20, 2019 23:55:00").getTime();
+    const now = new Date().getTime();
+    const distance = testDate - now;
+    let day = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let second = Math.floor((distance % (1000 * 60)) / 1000);
+    this.setState({
+      days: day,
+      hours: hour,
+      minutes: minute,
+      seconds: second,
     })
   }
   render() {
@@ -95,6 +116,26 @@ export class CourseDetail extends React.Component {
           </div>
           
         </div>
+        <div className="countdown-section">
+          <div className="container py-5">
+            <div className="row">
+              <div className="col-sm-6 py-sm-5 py-auto">
+                <h1 className="bold-title pt-sm-4 pt-auto">Your Journey Starts Here</h1>
+                <button className="btn btn-home-inverse-white mt-2 pr-5 pl-5">Enroll me right now</button>
+              </div>
+              <div className="col-sm-6 py-sm-5 pt-5">
+                <div className="row">
+                  <div className="col-12">
+                    <h3 className="bold-title">Remaining Time</h3>
+                    <CountdownNumber days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <Footer/>
       </div>
     )
   }
