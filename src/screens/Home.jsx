@@ -15,6 +15,7 @@ export class Home extends React.Component {
       listDataFromChild: null,
       status: 'inactive',
     }
+    this.routeToDetail = this.routeToDetail.bind(this)
   }
   componentDidMount = () => {
     this.setDate();
@@ -58,7 +59,7 @@ export class Home extends React.Component {
               </div>
             </div>
             <div className="row justify-content-md-center" id="course">
-              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail" status={this.state.status} onClick={this.routeToDetail}/>
+              <CourseCard title="Product Management" subtitle={this.state.countdown} img_url="card1" button="http://google.com" path="detail" status={this.state.status} onClick={this.routeToDetail} style={{cursor: 'pointer'}}/>
               <CourseCard title="Product Design" subtitle="Coming Soon" img_url="card2" button="http://google.com" path="detail"  status="inactive"/>
               <CourseCard title="UX Research" subtitle="Coming Soon" img_url="card3" button="http://google.com" path="detail"  status="inactive"/>
             </div>

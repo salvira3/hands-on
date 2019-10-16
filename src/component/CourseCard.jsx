@@ -20,7 +20,7 @@ export class CourseCard extends React.Component {
   render() {
     if (this.props.status === 'active') {
       return(
-        <div className="col-md-4 col-sm-12 pt-5" onClick={this.props.onClick}>
+        <div className="col-md-4 col-sm-12 pt-5 active-card" onClick={this.props.onClick} style={this.props.style}>
           <div className="thumbnail-container">
             <img src={require(`../asset/${this.props.img_url}.png`)} alt="course"/>
             <h4 class="bold-title title">{this.props.title}</h4>
