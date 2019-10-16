@@ -289,6 +289,15 @@ body {
   z-index: 1;
   background: rgba(0, 0, 0, .7);
 }
+.colored-number {
+  width: 65px;
+  height: 65px;
+  background: #2F8FFD;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  padding-top: 7px;
+}
 @media (max-width: 768px) { /* media queries for -md */
   .first-card {
     border-right: none;
@@ -310,6 +319,13 @@ body {
   }
   .desc-icon-small {
     text-align: center;
+  }
+  .mentor-card {
+    text-align: center;
+  }
+  .mentor-img-inactive {
+    left: 50%;
+    transform: translateX(-50%);
   }
   .logo {
     padding: 0;
