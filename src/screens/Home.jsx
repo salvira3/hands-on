@@ -45,7 +45,7 @@ export class Home extends React.Component {
     // get ref from sibling???
     return (
       <div>
-        <Header title="Get your real work experience here!" subtitle="Build experience and skills with our experienced Mentor and Work Experience Programs." refToScroll={this.dataFromHeader}/>
+        <Header title="Get your real work experience here!" subtitle="Build experience and skills with our experienced Mentor and Work Experience Programs." refToScroll={this.dataFromHeader} btn_text="Get early access" btn_url="https://hands-on.typeform.com/to/mA1QIC" section="home"/>
         <div style={{backgroundColor: "#F4F4F4"}} ref={this.state.listDataFromChild}>
           <div className="container pt-5 pb-5">
             <div className="row">

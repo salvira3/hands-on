@@ -13,7 +13,9 @@ export class Header extends React.Component {
     this.props = {
       title: '',
       subtitle: '',
-      img_url: '', // future improvement, conditional bg ?? button availability ??
+      btn_text: '',
+      btn_url: '',
+      section: '', // future improvement, conditional bg ?? button availability ??
     }
     this.buttonOnClick = this.buttonOnClick.bind(this)
     
@@ -35,7 +37,7 @@ export class Header extends React.Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-12 bg-home">
+          <div className={"col-12 bg-" + ((this.props.section === "home") ? "home" : "product")}>
             <Navbar/>
             <div className="container first-header-padding">
               <div className="row">
@@ -52,7 +54,7 @@ export class Header extends React.Component {
               </div>
               <div className="row">
                 <div className="col-12 col-md-6 pt-3 pb-3">
-                  <a href="https://hands-on.typeform.com/to/mA1QIC" target="_blank" rel="noopener noreferrer"><button class="btn btn-home pr-5 pl-5 mt-2">Get early access</button></a>
+                  <a href={this.props.btn_url} target="_blank" rel="noopener noreferrer"><button class="btn btn-home pr-5 pl-5 mt-2">{this.props.btn_text}</button></a>
                 </div>
               </div>
             </div>
