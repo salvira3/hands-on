@@ -2,6 +2,7 @@ import React from 'react';
 import { Header } from '../component/Header';
 import { DescIcon } from '../component/DescIcon';
 import { Footer } from '../container/Footer';
+import { MentorCard } from '../component/MentorCard';
 
 export class CourseDetail extends React.Component {
   constructor(props) {
@@ -41,6 +42,26 @@ export class CourseDetail extends React.Component {
               </div>
               <div className="col-sm-3">
                 <DescIcon img_url="icon-5" small={true} title="Get Constructive Feedback" subtitle="Experience will be more useful when you also get feedback about your work."/>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style={{backgroundColor: "#F4F4F4"}}>
+          <div className="container py-5">
+            <div className="row">
+              <div className="col-12 pb-5">
+                <h1 className="bold-title">Meet Our Mentor</h1>
+                <div className="row pt-5">
+                  <div className="col-sm-4">
+                    <MentorCard name="Muhammad Alvin Abyan" role="Product Manager at a Unicorn Startup" img_url="alvin" active={true}/>
+                  </div>
+                  <div className="col-sm-4">
+                    <MentorCard name="Oddi Muhammad Ikbar" role="Product Manager at Bukalapak" img_url="oddi" active={true}/>
+                  </div>
+                  <div className="col-sm-4">
+                    <MentorCard name="Coming Soon" role="Product Manager at Amartha" img_url="valian" active={false}/>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
