@@ -224,8 +224,11 @@ body {
   width: 100%; 
   height: 100%; 
 }
-.desc-icon img {
+.desc-icon-normal img {
   width: 120px;
+}
+.desc-icon-small img {
+  width: 80px;
 }
 .subtitle-role {
   font-family: 'Proxima Nova';
@@ -280,9 +283,11 @@ body {
   }
 }
 @media (max-width: 576px) { /* media queries -sm */
-  .desc-icon {
+  .desc-icon-normal {
     text-align: center;
-    
+  }
+  .desc-icon-small {
+    text-align: center;
   }
   .logo {
     padding: 0;

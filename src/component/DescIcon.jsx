@@ -10,11 +10,12 @@ export class DescIcon extends React.Component {
       title: '',
       subtitle: '',
       img_url: '',
+      small: false,
     }
   }
   render() {
     return(
-      <div className="desc-icon">
+      <div className={"desc-icon-" + (this.props.small ? "small" : "normal")}>
         <img src={require(`../asset/${this.props.img_url}.png`)} alt=""/>
         <h4 className="bold-title pt-3">{this.props.title}</h4>
         <p className="subtitle-content pt-3">{this.props.subtitle}</p>
