@@ -182,7 +182,7 @@ body {
   height: 240px;
   width: 100%;
   position: relative;
-  
+  transition: 0.5s;
 }
 
 .thumbnail-container img{
@@ -200,6 +200,10 @@ body {
   right: 0;
   z-index: 1;
   background: rgba(0, 0, 0, .5);
+  
+}
+.active-card .thumbnail-container:hover {
+  opacity: .7;
 }
 .thumbnail-container .title {
   color: white;
