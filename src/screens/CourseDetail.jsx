@@ -17,15 +17,10 @@ export class CourseDetail extends React.Component {
       seconds: '',
       intervalId: '',
     }
-    this.setDate = this.setDate.bind(this)
   }
   componentDidMount = () => {
     document.title = "Product Management Course at Hands-On";
-    const intervalId = setInterval(this.setDate(), 1000);
-    console.log('component did mount---------');
-    console.log(intervalId);
-    
-    
+    const intervalId = setInterval(this.setDate, 1000);
     this.setState({
       intervalId: intervalId
     })
