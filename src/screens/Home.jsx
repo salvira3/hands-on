@@ -27,7 +27,7 @@ export class Home extends React.Component {
     })
   }
   setDate = () => {
-    const testDate = new Date("October 20, 2019 23:55:00").getTime();
+    const testDate = new Date("October 26, 2019 23:55:00").getTime();
     const now = new Date().getTime();
     const distance = testDate - now;
     let day = Math.floor(distance / (1000 * 60 * 60 * 24));

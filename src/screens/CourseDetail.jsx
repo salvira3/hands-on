@@ -39,7 +39,7 @@ export class CourseDetail extends React.Component {
     })
   }
   setDate = () => {
-    const testDate = new Date("October 20, 2019 23:55:00").getTime();
+    const testDate = new Date("October 26, 2019 23:55:00").getTime();
     const now = new Date().getTime();
     const distance = testDate - now;
     let day = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -56,7 +56,7 @@ export class CourseDetail extends React.Component {
   render() {
     return (
       <div>
-        <Header title="How It Feels Like a Product Manager" subtitle="This program will give you a taste for some of the challenging problems that Product Manager tackles each day!" btn_text="Enroll me right now" btn_url="https://hands-on.typeform.com/to/mA1QIC" section="product" refToScroll={this.dataFromHeader}/>
+        <Header title="How It Feels Like to be a Product Manager" subtitle="This program will give you a taste for some of the challenging problems that Product Manager tackles each day!" btn_text="Enroll me right now" btn_url="https://hands-on.typeform.com/to/mA1QIC" section="product" refToScroll={this.dataFromHeader}/>
         <div style={{backgroundColor: 'white'}}>
           <div className="container py-5">
             <div className="row">
