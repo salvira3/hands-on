@@ -5,6 +5,7 @@ import { Footer } from '../container/Footer';
 import { MentorCard } from '../component/MentorCard';
 import { NumberDesc } from '../component/NumberDesc';
 import { CountdownNumber } from '../component/CountdownNumber';
+import { countdownDate } from '../utils/countdownDate';
 
 export class CourseDetail extends React.Component {
   constructor(props) {
@@ -16,6 +17,7 @@ export class CourseDetail extends React.Component {
       minutes: '',
       seconds: '',
       intervalId: '',
+      expired_date: null,
     }
   }
   componentDidMount = () => {
@@ -34,19 +36,20 @@ export class CourseDetail extends React.Component {
     })
   }
   setDate = () => {
-    const testDate = new Date("October 26, 2019 23:55:00").getTime();
-    const now = new Date().getTime();
-    const distance = testDate - now;
-    let day = Math.floor(distance / (1000 * 60 * 60 * 24));
-    let hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minute = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    let second = Math.floor((distance % (1000 * 60)) / 1000);
+    const getDate = countdownDate("October 26, 2019 23:55:00")
     this.setState({
-      days: day,
-      hours: hour,
-      minutes: minute,
-      seconds: second,
+      days: getDate.day,
+      hours: getDate.hour,
+      minutes: getDate.minute,
+      seconds: getDate.second,
     })
+    if (getDate.distance <= 0) {
+      
+      this.setState({
+        expired_date: getDate.distance
+      })
+    }
+    
   }
   render() {
     return (
@@ -134,7 +137,7 @@ export class CourseDetail extends React.Component {
                 <div className="row">
                   <div className="col-12">
                     <h3 className="bold-title">Remaining Time</h3>
-                    <CountdownNumber days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds}/>
+                    <CountdownNumber days={this.state.days} hours={this.state.hours} minutes={this.state.minutes} seconds={this.state.seconds} expire={this.state.expired_date}/>
                   </div>
                 </div>
               </div>

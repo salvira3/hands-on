@@ -5,6 +5,7 @@ import { DescIcon } from '../component/DescIcon';
 import { TestimoniCard } from '../component/TestimoniCard';
 import { RegisterCard } from '../component/RegisterCard';
 import { Footer } from '../container/Footer';
+import { countdownDate } from '../utils/countdownDate';
 import { BrowserRouter as Router, NavLink, Route, Switch, Link } from "react-router-dom";
 
 export class Home extends React.Component {
@@ -27,16 +28,12 @@ export class Home extends React.Component {
     })
   }
   setDate = () => {
-    const testDate = new Date("October 26, 2019 23:55:00").getTime();
-    const now = new Date().getTime();
-    const distance = testDate - now;
-    let day = Math.floor(distance / (1000 * 60 * 60 * 24));
-    // TO-DO: if include coming soon, status to inactive ???
+    const getDate = countdownDate("October 26, 2019 23:55:00")
     this.setState({
-      countdown: `Next batch opens on: ${day} day(s)`,
+      countdown: `Next batch opens on: ${getDate.day} day(s)`,
       status: 'active'
     })
-    if (distance <= 0) {
+    if (getDate.distance <= 0) {
       this.setState({
         countdown: `Coming Soon`,
         status: 'inactive',
