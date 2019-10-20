@@ -86,14 +86,14 @@ export class CourseDetail extends React.Component {
               </div>
             </div>
             <div className="row pt-5">
-              <div className="col-sm-4 pt-3 pt-sm-auto">
+              <div className="col-md-4 pt-3 pt-md-auto">
                 <MentorCard name="Muhammad Alvin Abyan" role="Product Manager at a Unicorn Startup" img_url="alvin" active={true}/>
               </div>
-              <div className="col-sm-4 pt-3 pt-sm-auto">
+              <div className="col-md-4 pt-3 pt-md-auto">
                 <MentorCard name="Oddi Muhammad Ikbar" role="Product Manager at Bukalapak" img_url="oddi" active={true}/>
               </div>
-              <div className="col-sm-4 pt-3 pt-sm-auto">
-                <MentorCard name="Coming Soon" role="Product Manager at Amartha" img_url="valian" active={false}/>
+              <div className="col-md-4 pt-3 pt-md-auto">
+                <MentorCard name="Coming Soon" role="Product Manager at Amartha" img_url="valian" active={true}/>
               </div>
             </div>
               
@@ -111,15 +111,15 @@ export class CourseDetail extends React.Component {
               <div className="col-sm-6">
                 <NumberDesc number="1" title="Define Problem Statement" subtitle="Define the overall problem statement." desc="You’ll have access to career coaching sessions, interview prep advice, and resume and online professional profile reviews to help."/>
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-6 pt-4 pt-sm-0">
                 <NumberDesc number="2" title="Analyze Root Cause" subtitle="Create a root cause of the problem." desc="You’ll have access to career coaching sessions, interview prep advice, and resume and online professional profile reviews to help."/>
               </div>
             </div>
             <div className="row pt-auto pt-sm-5">
-              <div className="col-sm-6">
+              <div className="col-sm-6 pt-4 pt-sm-0">
                 <NumberDesc number="3" title="Propose Your Solution" subtitle="Create solutions that solve the problems." desc="You’ll have access to career coaching sessions, interview prep advice, and resume and online professional profile reviews to help."/>
               </div>
-              <div className="col-sm-6">
+              <div className="col-sm-6 pt-4 pt-sm-0">
                 <NumberDesc number="4" title="Build User Flow & User Stories" subtitle="Create a user story based on the flow." desc="You’ll have access to career coaching sessions, interview prep advice, and resume and online professional profile reviews to help."/>
               </div>
             </div>

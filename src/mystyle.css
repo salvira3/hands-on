@@ -335,6 +335,9 @@ body {
   .testimoni-card {
     min-height: auto;
   }
+  .mentor-card {
+    text-align: center;
+  }
 }
 @media (max-width: 992px) and (min-width: 768px) { /* media queries for between -lg and -md */
   .testimoni-card {
@@ -348,9 +351,7 @@ body {
   .desc-icon-small {
     text-align: center;
   }
-  .mentor-card {
-    text-align: center;
-  }
+  
   .mentor-img-inactive {
     left: 50%;
     transform: translateX(-50%);
